@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Parking System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+header{
+    background:#0077b6;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+h2{
+    color:#0077b6;
+    margin-bottom:15px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-around;
+    margin:20px 0;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:220px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+    margin:10px;
+}
+
+.card h3{
+    color:#0077b6;
+}
+
+.slots{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.slot{
+    background:#2ecc71;
+    color:white;
+    text-align:center;
+    padding:30px 10px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.slot:hover{
+    transform:scale(1.05);
+}
+
+.booked{
+    background:#e74c3c;
+}
+
+button{
+    background:#0077b6;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:25px;
+    font-size:16px;
+}
+
+button:hover{
+    background:#023e8a;
+}
+
+footer{
+    margin-top:40px;
+    background:#0077b6;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🚗 Smart Parking System</h1>
+<p>Real-Time Parking Slot Booking</p>
+</header>
+
+<div class="container">
+
+<div class="info">
+
+<div class="card">
+<h3>Total Slots</h3>
+<h1 id="total">12</h1>
+</div>
+
+<div class="card">
+<h3>Available</h3>
+<h1 id="available">12</h1>
+</div>
+
+<div class="card">
+<h3>Booked</h3>
+<h1 id="booked">0</h1>
+</div>
+
+</div>
+
+<h2>Select a Parking Slot</h2>
+
+<div class="slots" id="parkingArea">
+
+<div class="slot">A1</div>
+<div class="slot">A2</div>
+<div class="slot">A3</div>
+<div class="slot">A4</div>
+<div class="slot">B1</div>
+<div class="slot">B2</div>
+<div class="slot">B3</div>
+<div class="slot">B4</div>
+<div class="slot">C1</div>
+<div class="slot">C2</div>
+<div class="slot">C3</div>
+<div class="slot">C4</div>
+
+</div>
+
+<center>
+<button onclick="resetSlots()">Reset All Slots</button>
+</center>
+
+</div>
+
+<footer>
+© 2026 Smart Parking System
+</footer>
+
+<script>
+
+let slots=document.querySelectorAll(".slot");
+
+let available=12;
+let booked=0;
+
+slots.forEach(slot=>{
+
+slot.addEventListener("click",function(){
+
+if(!this.classList.contains("booked")){
+
+let confirmBooking=confirm("Book Slot "+this.innerText+" ?");
+
+if(confirmBooking){
+
+this.classList.add("booked");
+
+this.innerHTML=this.innerText+"<br>Booked";
+
+available--;
+booked++;
+
+updateCount();
+
+alert("Parking Slot Booked Successfully!");
+
+}
+
+}else{
+
+alert("This slot is already booked.");
+
+}
+
+});
+
+});
+
+function updateCount(){
+
+document.getElementById("available").innerText=available;
+document.getElementById("booked").innerText=booked;
+
+}
+
+function resetSlots(){
+
+slots.forEach(slot=>{
+
+slot.classList.remove("booked");
+slot.innerHTML=slot.innerText.split("\n")[0];
+
+});
+
+available=12;
+booked=0;
+
+updateCount();
+
+alert("All parking slots are available now.");
+
+}
+
+</script>
+
+</body>
+</html>
