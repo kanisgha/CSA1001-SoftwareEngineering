@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requirements Elicitation & Prioritization</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef5ff;
+    padding:30px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:20px;
+}
+
+.section{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:12px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.15);
+}
+
+.section h2{
+    color:#1565c0;
+    margin-bottom:15px;
+    border-left:6px solid #1565c0;
+    padding-left:10px;
+}
+
+p{
+    line-height:1.8;
+}
+
+ul{
+    margin-left:25px;
+    margin-top:10px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th{
+    background:#1565c0;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+.must{
+    background:#ffebee;
+}
+
+.should{
+    background:#fff8e1;
+}
+
+.could{
+    background:#e8f5e9;
+}
+
+.wont{
+    background:#eeeeee;
+}
+
+.basic{
+    background:#f3e5f5;
+}
+
+.performance{
+    background:#e3f2fd;
+}
+
+.excitement{
+    background:#fff3e0;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#444;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Problem 1: Requirements Elicitation & Prioritization in a College Attendance System</h1>
+
+<div class="section">
+
+<h2>Scenario</h2>
+
+<p>
+You are working as a <b>Business Analyst</b> for a College Attendance
+Management System. Different stakeholders have different expectations:
+</p>
+
+<ul>
+<li><b>Students</b> want a mobile app to check attendance.</li>
+<li><b>Teachers</b> want biometric attendance to avoid proxy attendance.</li>
+<li><b>Management</b> wants the project to be low-cost and completed quickly.</li>
+</ul>
+
+<p>
+As a Business Analyst, your responsibility is to gather requirements,
+prioritize them, classify features, and resolve stakeholder conflicts.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>1. Well-Defined Requirements</h2>
+
+<ul>
+<li>Students should be able to view attendance through a mobile application.</li>
+
+<li>Teachers should record attendance using biometric authentication.</li>
+
+<li>Management should receive monthly attendance reports.</li>
+
+<li>The system should be developed within budget and completed on time.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>2. MoSCoW Prioritization</h2>
+
+<table>
+
+<tr>
+<th>Priority</th>
+<th>Requirement</th>
+</tr>
+
+<tr class="must">
+<td>Must Have</td>
+<td>Biometric Attendance System</td>
+</tr>
+
+<tr class="must">
+<td>Must Have</td>
+<td>Attendance Report Generation</td>
+</tr>
+
+<tr class="should">
+<td>Should Have</td>
+<td>Student Mobile App</td>
+</tr>
+
+<tr class="could">
+<td>Could Have</td>
+<td>Attendance Notifications</td>
+</tr>
+
+<tr class="wont">
+<td>Won't Have (Now)</td>
+<td>AI-Based Attendance Prediction</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>3. Kano Model Classification</h2>
+
+<table>
+
+<tr>
+<th>Category</th>
+<th>Feature</th>
+</tr>
+
+<tr class="basic">
+<td>Basic</td>
+<td>Secure Attendance Recording</td>
+</tr>
+
+<tr class="basic">
+<td>Basic</td>
+<td>Accurate Attendance Reports</td>
+</tr>
+
+<tr class="performance">
+<td>Performance</td>
+<td>Fast Biometric Authentication</td>
+</tr>
+
+<tr class="performance">
+<td>Performance</td>
+<td>Quick Attendance Updates</td>
+</tr>
+
+<tr class="excitement">
+<td>Excitement</td>
+<td>Attendance Notifications</td>
+</tr>
+
+<tr class="excitement">
+<td>Excitement</td>
+<td>Attendance Analytics Dashboard</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>4. Stakeholder Conflict</h2>
+
+<h3>Conflict</h3>
+
+<p>
+Teachers insist on biometric attendance because it improves accuracy
+and prevents proxy attendance. However, management wants a low-cost
+solution that can be delivered quickly. Installing biometric devices
+increases both cost and development time.
+</p>
+
+<h3>Resolution Plan</h3>
+
+<ul>
+
+<li>Conduct meetings with all stakeholders.</li>
+
+<li>Explain the advantages and disadvantages of biometric integration.</li>
+
+<li>Prioritize essential features for the first release.</li>
+
+<li>Implement biometric attendance in the next phase if budget is limited.</li>
+
+<li>Obtain approval from management and teachers before implementation.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Reasoning</h2>
+
+<p>
+This problem demonstrates the importance of Requirements Engineering.
+A Business Analyst collects requirements from stakeholders, prioritizes
+them using the MoSCoW technique, classifies features with the Kano Model,
+and resolves conflicts to ensure successful software development within
+the available budget and timeline.
+</p>
+
+</div>
+
+<div class="footer">
+Software Engineering Assignment | College Attendance Management System
+</div>
+
+</div>
+
+</body>
+</html>
